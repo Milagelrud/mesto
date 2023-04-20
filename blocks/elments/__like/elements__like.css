@@ -8,10 +8,11 @@
   background-color: transparent;
   background-size: contain;
   transition: opacity .3s ease;
+  cursor: pointer;
 }
 
 .elements__like:hover {
-  opacity: .6;
+  opacity: .5;
 }
 
 /*.elements__like_active {

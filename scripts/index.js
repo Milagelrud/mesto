@@ -9,27 +9,25 @@ let jobInput = formElement.querySelector('input[name="job"]');
 let profileInfoName = document.querySelector('.profile__info-name');
 let profileInfoJob = document.querySelector('.profile__info-job');
 
-nameInput.value = profileInfoName.textContent
-jobInput.value = profileInfoJob.textContent
-
 function displayNone() {
-    popup.style.display = 'none';
+    popup.classList.remove('popup__open');
   }
 
-buttonOpenPopup.addEventListener('click', function () {
-    popup.style.display = 'flex';
-  }); 
+function displayOpen() {
+    nameInput.value = profileInfoName.textContent
+    jobInput.value = profileInfoJob.textContent
+    popup.classList.add('popup__open');  
+  }
 
-buttonClosePopup.addEventListener('click', displayNone);
-
-function handleFormSubmit (evt) {
+  function handleFormSubmit (evt) {
     evt.preventDefault(); 
-    let nameInputValue = nameInput.value;
-    let jobInputValue = jobInput.value;
-
-    profileInfoName.textContent = nameInputValue;
-    profileInfoJob.textContent = jobInputValue;
+    profileInfoName.textContent = nameInput.value;
+    profileInfoJob.textContent = jobInput.value;
     displayNone();
 }
+
+buttonOpenPopup.addEventListener('click', displayOpen); 
+
+buttonClosePopup.addEventListener('click', displayNone);
 
 formElement.addEventListener('submit', handleFormSubmit);

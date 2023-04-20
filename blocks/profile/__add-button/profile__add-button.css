@@ -9,6 +9,8 @@
     margin-left: 250px;
     align-self: center;
     padding: 0;
+    cursor: pointer;
+    border-radius: 2px;
 }
   
 .profile__add-button:hover {
