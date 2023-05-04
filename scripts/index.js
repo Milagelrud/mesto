@@ -10,13 +10,13 @@ let profileInfoName = document.querySelector('.profile__info-name');
 let profileInfoJob = document.querySelector('.profile__info-job');
 
 function displayNone() {
-    popup.classList.remove('popup__open');
+    popup.classList.remove('popup_open');
   }
 
 function displayOpen() {
     nameInput.value = profileInfoName.textContent
     jobInput.value = profileInfoJob.textContent
-    popup.classList.add('popup__open');  
+    popup.classList.add('popup_open');  
   }
 
   function handleFormSubmit (evt) {
